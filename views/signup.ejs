@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Signup</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <form action="/user/signup" method="post">
+            <div class="mb-3">
+              <label for="fullName" class="form-label fw-bold fs-4 text-primary">Full Name</label>
+              <input type="text" class="form-control" id="fullName" name="fullName" aria-describedby="fullName">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold fs-4 text-primary">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="email">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label fw-bold fs-4 text-primary">Password</label>
+              <input type="password" id="password" class="form-control" name="password" aria-describedby="password">
+              <div id="passwordHelpBlock" class="form-text">
+                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-outline-success btn-lg">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>    
+    <%- include('./partials/script') %>
+</body>
+</html>

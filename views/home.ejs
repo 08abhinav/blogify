@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+    <title>Blog Homepage</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+
+    <header class="container mt-4 text-info d-flex flex-column justify-content-center align-items-center">
+        <h1>Welcome to Blogify</h1>
+        <p>Your go-to place for insightful articles on technology, lifestyle, and more!</p>
+    </header>
+
+    <div class="container">
+        <% blogs.forEach(blog => { %>
+            <div class="card mt-3" style="width: 18rem;">
+                <img src="<%= blog.coverImg %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title"><%= blog.title %></h5>
+                <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <%- include('./partials/script') %>
+</body>
+
+</html>

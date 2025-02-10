@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <%- include('./partials/head') %>
+    <title>Add New Blog</title>
+</head>
+
+<body>  
+    <%- include('./partials/nav') %>
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <form action="/user/addblog"  method="post" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="title" class="form-label fw-bold fs-4 text-primary">Title</label>
+                <input type="text" class="form-control card border-warning" id="Title" name="title" aria-describedby="Title">
+              </div>
+              <div class="mb-3">
+                <label for="content" class="form-label fw-bold fs-4 text-primary">Body</label>
+                <textarea name="content" id="content" class="form-control card border-warning" aria-describedby="content" rows="10"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="coverImg" class="form-label fw-bold fs-4 text-primary">Image</label>
+                <input type="file" name="coverImg" id="coverImg" class="form-control card border-warning" aria-describedby="coverImg">
+              </div>
+              <!-- <div class="mb-3">
+                <label for="createdBy" class="form-label fw-bold fs-4 text-primary">Created By</label>
+                <input type="text" name="createBy" id="createdBy" class="form-control card border-warning" aria-describedby="createdBy"></textarea>
+              </div> -->
+              <div class="mb-3">
+                <button class="btn btn-outline-info" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <%- include('./partials/script') %>
+</body>
+
+</html>
